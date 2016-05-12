@@ -38,7 +38,7 @@ public class MainActivity extends AppCompatActivity {
                 {
                     SampleModel model= sampleModels.get(i);
 
-                    Log.i("List", "" + model.getFirstURL().toString());
+                    Log.i("List", "" + model.getRelatedTopics().get(i));
 
 //Fill the adapter
 

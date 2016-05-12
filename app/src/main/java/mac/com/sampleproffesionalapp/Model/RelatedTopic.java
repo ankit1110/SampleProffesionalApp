@@ -6,6 +6,7 @@ package mac.com.sampleproffesionalapp.Model;
 
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
+import mac.com.sampleproffesionalapp.Model.Icon;
 
 
 public class RelatedTopic {
@@ -15,7 +16,7 @@ public class RelatedTopic {
     private String Result;
     @SerializedName("Icon")
     @Expose
-    private mac.com.sampleproffesionalapp.Icon Icon;
+    protected Icon Icon;
     @SerializedName("FirstURL")
     @Expose
     private String FirstURL;
@@ -46,7 +47,7 @@ public class RelatedTopic {
      * @return
      * The Icon
      */
-    public mac.com.sampleproffesionalapp.Icon getIcon() {
+    public Icon getIcon() {
         return Icon;
     }
 
@@ -55,7 +56,7 @@ public class RelatedTopic {
      * @param Icon
      * The Icon
      */
-    public void setIcon(mac.com.sampleproffesionalapp.Icon Icon) {
+    public void setIcon(Icon Icon) {
         this.Icon = Icon;
     }
 
