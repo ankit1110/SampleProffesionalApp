@@ -4,6 +4,7 @@ import java.util.List;
 
 
 import mac.com.sampleproffesionalapp.Model.Icon;
+import mac.com.sampleproffesionalapp.Model.RelatedTopic;
 import mac.com.sampleproffesionalapp.Model.SampleModel;
 import retrofit.Callback;
 import retrofit.http.GET;
@@ -13,5 +14,5 @@ import retrofit.http.GET;
  */
 public interface Sample_API {
     @GET("/?q=simpsons+characters&format=json")
-    public void getData(Callback<List<SampleModel>> response);
+    public void getData(Callback<List<Icon>> response);
 }

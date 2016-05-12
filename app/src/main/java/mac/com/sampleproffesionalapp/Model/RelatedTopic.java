@@ -4,11 +4,10 @@ package mac.com.sampleproffesionalapp.Model;
  * Created by Ankitkumar on 5/12/2016.
  */
 
-import com.google.gson.annotations.Expose;
-import com.google.gson.annotations.SerializedName;
-import mac.com.sampleproffesionalapp.Model.Icon;
 
-
+        import com.google.gson.annotations.Expose;
+        import com.google.gson.annotations.SerializedName;
+        import mac.com.sampleproffesionalapp.Model.Icon;
 public class RelatedTopic {
 
     @SerializedName("Result")
@@ -16,7 +15,7 @@ public class RelatedTopic {
     private String Result;
     @SerializedName("Icon")
     @Expose
-    protected Icon Icon;
+    private Icon Icon;
     @SerializedName("FirstURL")
     @Expose
     private String FirstURL;

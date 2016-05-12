@@ -8,6 +8,8 @@ import android.widget.Toast;
 import java.util.List;
 
 import mac.com.sampleproffesionalapp.Api.Sample_API;
+import mac.com.sampleproffesionalapp.Model.Icon;
+import mac.com.sampleproffesionalapp.Model.RelatedTopic;
 import mac.com.sampleproffesionalapp.Model.SampleModel;
 import mac.com.sampleproffesionalapp.URL.URL1;
 import retrofit.Callback;
@@ -30,15 +32,15 @@ public class MainActivity extends AppCompatActivity {
         //
         Sample_API Icall = rest.create(Sample_API.class);
 
-        Icall.getData(new Callback<List<SampleModel>>() {
+        Icall.getData(new Callback<List<Icon>>() {
             @Override
-            public void success(List<SampleModel> sampleModels, Response response) {
+            public void success(List<Icon> sampleModels, Response response) {
 
                 for(int i=0;i<sampleModels.size();i++)
                 {
-                    SampleModel model= sampleModels.get(i);
+                    Icon model= sampleModels.get(i);
 
-                    Log.i("List", "" + model.getRelatedTopics().get(i));
+                    Log.i("List", "" + model.getURL().toString());
 
 //Fill the adapter
 
