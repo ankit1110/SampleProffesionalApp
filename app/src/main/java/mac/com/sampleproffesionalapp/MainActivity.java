@@ -3,14 +3,13 @@ package mac.com.sampleproffesionalapp;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
-import android.view.accessibility.AccessibilityManager;
 import android.widget.Toast;
 
 import java.util.List;
 
 import mac.com.sampleproffesionalapp.Api.Sample_API;
 import mac.com.sampleproffesionalapp.Model.SampleModel;
-import mac.com.sampleproffesionalapp.URL.URL;
+import mac.com.sampleproffesionalapp.URL.URL1;
 import retrofit.Callback;
 import retrofit.RestAdapter;
 import retrofit.RetrofitError;
@@ -26,7 +25,7 @@ public class MainActivity extends AppCompatActivity {
 
         RestAdapter rest=new RestAdapter.Builder()
                 .setLogLevel(RestAdapter.LogLevel.FULL)
-                .setEndpoint(URL.BASE_URL)
+                .setEndpoint(URL1.BASE_URL)
                 .build();
         //
         Sample_API Icall = rest.create(Sample_API.class);
@@ -39,7 +38,7 @@ public class MainActivity extends AppCompatActivity {
                 {
                     SampleModel model= sampleModels.get(i);
 
-                    Log.i("List", "" + model.getText().toString());
+                    Log.i("List", "" + model.getFirstURL().toString());
 
 //Fill the adapter
 
@@ -51,7 +50,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void failure(RetrofitError error)
             {
-                Toast.makeText(getApplicationContext(),"Failed",Toast.LENGTH_SHORT).show();
+                Toast.makeText(getApplicationContext(),error.toString(),Toast.LENGTH_SHORT).show();
             }
         });
 

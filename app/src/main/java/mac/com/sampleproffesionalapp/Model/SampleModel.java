@@ -3,43 +3,98 @@ package mac.com.sampleproffesionalapp.Model;
 /**
  * Created by Ankitkumar on 5/12/2016.
  */
+import java.util.ArrayList;
+import java.util.List;
+
+import com.google.gson.annotations.Expose;
+import com.google.gson.annotations.SerializedName;
+
+
 public class SampleModel {
 
-    private String Result;
-    private mac.com.sampleproffesionalapp.Model.Icon Icon;
-    private String FirstURL;
-    private String Text;
+    @SerializedName("DefinitionSource")
+    @Expose
+    private String DefinitionSource;
+    @SerializedName("Heading")
+    @Expose
+    private String Heading;
+    @SerializedName("ImageWidth")
+    @Expose
+    private Integer ImageWidth;
+    @SerializedName("RelatedTopics")
+    @Expose
+    private List<RelatedTopic> RelatedTopics = new ArrayList<RelatedTopic>();
 
-    public String getResult() {
-        return Result;
+    /**
+     *
+     * @return
+     * The DefinitionSource
+     */
+    public String getDefinitionSource() {
+        return DefinitionSource;
     }
 
-    public void setResult(String Result) {
-        this.Result = Result;
+    /**
+     *
+     * @param DefinitionSource
+     * The DefinitionSource
+     */
+    public void setDefinitionSource(String DefinitionSource) {
+        this.DefinitionSource = DefinitionSource;
     }
 
-    public mac.com.sampleproffesionalapp.Model.Icon getIcon() {
-        return Icon;
+    /**
+     *
+     * @return
+     * The Heading
+     */
+    public String getHeading() {
+        return Heading;
     }
 
-    public void setIcon(mac.com.sampleproffesionalapp.Model.Icon Icon) {
-        this.Icon = Icon;
+    /**
+     *
+     * @param Heading
+     * The Heading
+     */
+    public void setHeading(String Heading) {
+        this.Heading = Heading;
     }
 
-    public String getFirstURL() {
-        return FirstURL;
+    /**
+     *
+     * @return
+     * The ImageWidth
+     */
+    public Integer getImageWidth() {
+        return ImageWidth;
     }
 
-    public void setFirstURL(String FirstURL) {
-        this.FirstURL = FirstURL;
+    /**
+     *
+     * @param ImageWidth
+     * The ImageWidth
+     */
+    public void setImageWidth(Integer ImageWidth) {
+        this.ImageWidth = ImageWidth;
     }
 
-    public String getText() {
-        return Text;
+    /**
+     *
+     * @return
+     * The RelatedTopics
+     */
+    public List<RelatedTopic> getRelatedTopics() {
+        return RelatedTopics;
     }
 
-    public void setText(String Text) {
-        this.Text = Text;
+    /**
+     *
+     * @param RelatedTopics
+     * The RelatedTopics
+     */
+    public void setRelatedTopics(List<RelatedTopic> RelatedTopics) {
+        this.RelatedTopics = RelatedTopics;
     }
 
 }
